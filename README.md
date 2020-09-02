@@ -1,16 +1,11 @@
 # reproducibleresearch
 
-title	author	date	output
-Course Project 1 - Reproducible Research
-Shengyu Chen
-March 20, 2016
-html_document
+
 ##Assignment Instructions 1.Code for reading in the dataset and/or processing the data 2.Histogram of the total number of steps taken each day 3.Mean and median number of steps taken each day 4.Time series plot of the average number of steps taken 5.The 5-minute interval that, on average, contains the maximum number of steps 6.Code to describe and show a strategy for imputing missing data 7.Histogram of the total number of steps taken each day after missing values are imputed 8.Panel plot comparing the average number of steps taken per 5-minute interval across weekdays and weekends 9.All of the R code needed to reproduce the results (numbers, plots, etc.) in the report
 
 ##Step 1 ##Code for reading in the dataset and/or processing the data
 
-setwd("C:/Users/Shengyu Chen/Dropbox/Academics/Coursera/Data Science Specialization/Reproducible Research/Course Project 1")
-activity<-read.csv("activity.csv")
+
 Exploring the basics of this data
 
 dim(activity)
@@ -23,6 +18,7 @@ sum(is.na(activity$steps))/dim(activity)[[1]]
 library(lubridate)
 activity$date<-ymd(activity$date)
 length(unique(activity$date))
+
 ##Step 2 ##Histogram of the total number of steps taken each day
 
 library(ggplot2)
